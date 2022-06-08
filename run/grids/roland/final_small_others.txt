@@ -1,0 +1,11 @@
+# Run live-update evaluation for all baseline models (7)
+
+dataset.format format ['infer']
+dataset.name name ['bsi_svt_2008.tsv','bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','reddit-body.tsv','reddit-title.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn','dcrnn']
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn','dcrnn']

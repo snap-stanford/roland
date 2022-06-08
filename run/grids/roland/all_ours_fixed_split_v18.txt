@@ -1,0 +1,8 @@
+# 48 configs.
+dataset.AS_node_feature node_feature ['one_hot_id','one_hot_degree_global']
+dataset.name name ['AS-733']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.3,0.5,0.7,0.9,1.0]
+gnn.layers_mp layers_mp [2,4]
+gnn.dim_inner dim_inner [64,128]
+optim.base_lr lr [0.01]

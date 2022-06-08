@@ -1,0 +1,10 @@
+# Run all variations of our model on 7 small datasets.
+
+dataset.format format ['infer']
+dataset.name name ['reddit-title.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.dim_inner dim_inner [64,128]
+gnn.layers_mp layers_mp [4,6,8]
+gnn.embed_update_method update ['moving_average','masked_gru','moving_average_gru','gru']
+optim.base_lr lr [0.003,0.01]

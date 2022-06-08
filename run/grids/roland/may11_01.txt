@@ -1,0 +1,9 @@
+# 18 configs.
+
+dataset.format format ['infer']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.3,0.5,0.7,0.9,1.0]
+dataset.name name ['bsi_zk_2008.tsv']
+dataset.premade_datasets pd ['cached_zk_ready.pt']
+transaction.snapshot_freq freq ['D']
+gnn.embed_update_method update ['moving_average','mlp','gru']

@@ -1,0 +1,3 @@
+train.mode train ['live_update']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn','edge_conv_gru','residual_edge_conv']
+gnn.layer_mp layer_mp [1,2,4]

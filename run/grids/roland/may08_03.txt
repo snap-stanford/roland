@@ -1,0 +1,9 @@
+# Experiment on our model with different meta learning initialization setting.
+
+dataset.format format ['infer']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+dataset.name name ['bsi_svt_2008.tsv','CollegeMsg.txt']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average','masked_gru','moving_average_gru','gru']

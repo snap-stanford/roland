@@ -1,0 +1,10 @@
+# 98 configs.
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['residual_edge_conv']
+gnn.batchnorm bn [True,False]
+gnn.layers_mp layers_mp [2,4,6,8]
+gnn.agg agg ['add','mean','max']
+gnn.embed_update_method update ['moving_average','masked_gru','moving_average_gru','gru']

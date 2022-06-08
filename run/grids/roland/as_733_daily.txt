@@ -1,0 +1,17 @@
+# Live-update all-in-one script.
+# HOW TO USE: all you need to change is the dataset.dir field in config.yaml.
+
+# Set dataset.format to 'infer', main.py will fill 
+# format, edge_dim, edge_encoder_name, node_encoder automatically based on name.
+# for as-733 dataset, put name = 'AS-733'.
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average','masked_gru','moving_average_gru','gru']
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn']

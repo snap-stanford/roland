@@ -1,0 +1,7 @@
+# 16 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.dim_inner dim [128,256]
+gnn.layers_mp layers [1,2]
+gnn.batchnorm bn [True,False]
+gnn.skip_connection skip ['affine','linear']
+transaction.snapshot_freq freq ['D']

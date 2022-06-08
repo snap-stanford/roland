@@ -1,0 +1,12 @@
+# grid file.
+# part 1: compare our model with other models in different settings. 2*7*3=42 configs.
+gnn.layer_type model_type ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn','edge_conv_gru']
+gnn.batchnorm gnn_bn [False]
+gnn.layers_mp layer_mp [1,2,3]
+train.internal_validation_tolerance tol [5]
+
+# part 2: more detailed analysis for our model. 2*2*2*3=24 configs.
+gnn.layer_type model_type ['residual_edge_conv','residual_edge_att_conv_v1']
+gnn.batchnorm gnn_bn [True,False]
+gnn.layers_mp layer_mp [1,2,3]
+train.internal_validation_tolerance tol [5]

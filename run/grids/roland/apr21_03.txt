@@ -1,0 +1,6 @@
+# 54 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.agg agg ['add','mean','max']
+gnn.layers_mp layer_mp [2,4,6]
+optim.base_lr lr [0.03,0.01,0.003]
+train.internal_validation_tolerance tol [5,10]

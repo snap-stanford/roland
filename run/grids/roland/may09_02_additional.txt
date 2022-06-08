@@ -1,0 +1,7 @@
+# 36 configs.
+
+dataset.format format ['infer']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn']
+train.mode mode ['live_update_baseline']

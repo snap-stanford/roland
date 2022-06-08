@@ -1,0 +1,73 @@
+remark: roland_example_run  # change this to determine where to store tensorboard files.
+out_dir: results
+device: auto
+experimental:
+  rank_eval_multiplier: 100
+dataset:
+  format: infer  # main.py infers format from name, for cleaner grid file.
+  name: bitcoinotc.csv  # CONTROLLED_IN_GRID
+  is_hetero: False
+  dir: /home/tianyudu/Data/roland_public_data
+  # premade_datasets: cached_zk_ready.pt  # only need for BSI large dataset.
+  task: link_pred
+  shuffle: True
+  negative_sample_weight: uniform
+  task_type: classification
+  transductive: True
+  split: [0.8, 0.1, 0.1]
+  augment_feature: []
+  augment_feature_dims: [0]
+  augment_feature_repr: position
+  augment_label: ''
+  augment_label_dims: 0
+  transform: none
+  edge_encoder: True  # CONTROLLED_IN_GRID
+  edge_dim: 2  # CONTROLLED_IN_GRID, edge_dim in the raw dataset.
+  edge_encoder_name: roland
+  edge_encoder_bn: True
+  node_encoder: True
+  node_encoder_name: roland
+  node_encoder_bn: True
+transaction:
+  keep_ratio: linear
+  snapshot: True
+  snapshot_freq: D
+  check_snapshot: False
+  history: rolling
+  horizon: 1
+  pred_mode: at
+  loss: supervised
+  feature_int_dim: 16  # only used when one of init_num != [].
+  feature_edge_int_num: []  #
+  feature_node_int_num: [1483, 32, 13, 24, 5]  # loader will set this if needed.
+  feature_amount_dim: 16
+  feature_time_dim: 16
+train:
+  batch_size: 32
+  eval_period: 20
+  ckpt_period: 400
+  mode: live_update
+model:
+  type: gnn_recurrent
+  loss_fun: cross_entropy
+  edge_decoding: concat
+  graph_pooling: add
+gnn:
+  embed_update_method: mlp
+  layers_pre_mp: 1
+  layers_mp: 2
+  layers_post_mp: 2
+  dim_inner: 64
+  layer_type: residual_edge_conv
+  skip_connection: affine
+  stage_type: stack
+  batchnorm: True
+  act: prelu
+  dropout: 0.0
+  agg: add
+  att_heads: 1
+  normalize_adj: False
+optim:
+  optimizer: adam
+  base_lr: 0.03
+  max_epoch: 100

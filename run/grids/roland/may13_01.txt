@@ -1,0 +1,13 @@
+# 3 configs.
+
+dataset.format format ['infer']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average']
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average']

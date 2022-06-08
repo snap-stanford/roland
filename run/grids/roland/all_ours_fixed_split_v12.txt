@@ -1,0 +1,10 @@
+# 24 configs.
+gnn.layer_type model ['residual_edge_conv']
+dataset.AS_node_feature node_feature ['one_hot_id','one_hot_degree_global']
+dataset.name name ['AS-733']
+gnn.embed_update_method update ['gru']
+gnn.layers_mp mp [2,3,4]
+gnn.batchnorm bn [True]
+gnn.msg_direction msgdir ['both']
+optim.base_lr lr [0.1,0.3]
+gnn.layers_post_mp post_mp [2,3]

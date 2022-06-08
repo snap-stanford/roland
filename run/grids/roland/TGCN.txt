@@ -1,0 +1,9 @@
+# Experiment on our model with different meta learning initialization setting.
+
+dataset.format format ['infer']
+dataset.name name ['bsi_svt_2008.tsv','bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','reddit-body.tsv','reddit-title.tsv']
+transaction.snapshot_freq freq ['W']
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']

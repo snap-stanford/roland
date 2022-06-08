@@ -1,0 +1,17 @@
+# Experiment on our model with different meta learning initialization setting.
+
+dataset.format format ['infer']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.3,0.5,0.7,0.9]
+dataset.name name ['bsi_svt_2008.tsv','bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','reddit-body.tsv','reddit-title.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average_gru']
+
+dataset.format format ['infer']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.3,0.5,0.7,0.9]
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average_gru']

@@ -1,0 +1,6 @@
+# 8 configs.
+dataset.AS_node_feature node_feature ['one_hot_id','one_hot_degree_global']
+dataset.name name ['AS-733']
+gnn.layers_pre_mp pre_mp [2,8]
+optim.base_lr lr [0.01]
+train.internal_validation_tolerance tol [10,20]

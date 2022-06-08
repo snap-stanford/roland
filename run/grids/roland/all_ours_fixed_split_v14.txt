@@ -1,0 +1,5 @@
+# 18 configs.
+dataset.AS_node_feature node_feature ['one_hot_id','one_hot_degree_global']
+dataset.name name ['AS-733']
+gnn.layers_mp mp [4,5,6]
+gnn.dim_inner dim_inner [64,128,256]

@@ -1,0 +1,20 @@
+# Run all variations of our model on 7 small datasets.
+
+dataset.format format ['infer']
+dataset.name name ['bsi_svt_2008.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.batchnorm bn [True,False]
+gnn.layers_mp layers_mp [2,4,6,8]
+gnn.agg agg ['add','mean','max']
+gnn.embed_update_method update ['masked_gru','moving_average_gru','gru']
+gnn.gru_kernel gru ['linear','sageconv','gatconv','splineconv','generaledgeconv']
+
+dataset.format format ['infer']
+dataset.name name ['bsi_svt_2008.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.batchnorm bn [True,False]
+gnn.layers_mp layers_mp [2,4,6,8]
+gnn.agg agg ['add','mean','max']
+gnn.embed_update_method update ['moving_average']

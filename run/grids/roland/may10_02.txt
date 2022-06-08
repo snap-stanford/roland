@@ -1,0 +1,17 @@
+# 252 configs.
+
+dataset.format format ['infer']
+dataset.name name ['bsi_svt_2008.tsv','bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','reddit-body.tsv','reddit-title.tsv']
+transaction.snapshot_freq freq ['W']
+gnn.mlp_update_layers update_mlp [2,3]
+gnn.layers_mp layers_mp [2,4,6]
+gnn.batchnorm bn [True,False]
+optim.base_lr lr [0.003,0.01]
+
+dataset.format format ['infer']
+dataset.name name ['AS-733']
+transaction.snapshot_freq freq ['D']
+gnn.mlp_update_layers update_mlp [2,3]
+gnn.layers_mp layers_mp [2,4,6]
+gnn.batchnorm bn [True,False]
+optim.base_lr lr [0.003,0.01]

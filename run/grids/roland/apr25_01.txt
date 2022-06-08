@@ -1,0 +1,6 @@
+meta.is_meta meta [True]
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.batchnorm gnn_bn [False]
+optim.base_lr lr [0.03]
+gnn.layers_mp layer_mp [1,2]
+meta.alpha alpha [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]

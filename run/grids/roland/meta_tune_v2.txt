@@ -1,0 +1,10 @@
+# 360 configs
+dataset.format format ['infer']
+dataset.AS_node_feature node_feature ['one_hot_id']
+meta.is_meta is_meta [True]
+meta.alpha alpha [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+dataset.name name ['CollegeMsg.txt']
+gnn.embed_update_method update ['moving_average','mlp','gru']
+gnn.layers_mp mp [2,3]
+gnn.batchnorm bn [True,False]
+optim.base_lr lr [0.003,0.01,0.03]

@@ -1,0 +1,16 @@
+# grid file.
+# part 1: compare our model with other models in different settings. 15 configs.
+gnn.layer_type model_type ['gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn','edge_conv_gru']
+gnn.batchnorm gnn_bn [False]
+gnn.layers_mp layer_mp [1,2,3]
+gnn.skip_connection skip ['affine']
+optim.base_lr lr [0.01]
+train.internal_validation_tolerance tol [5]
+
+# part 2: more detailed analysis for our model. 72 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.batchnorm gnn_bn [True,False]
+gnn.layers_mp layer_mp [1,2,3]
+gnn.skip_connection skip ['affine','linear']
+optim.base_lr lr [0.03,0.01,0.003]
+train.internal_validation_tolerance tol [5,10]

@@ -1,0 +1,149 @@
+dataset:
+  augment_feature: []
+  augment_feature_dims: []
+  augment_feature_repr: position
+  augment_label: ''
+  augment_label_dims: 0
+  dir: /lfs/hyperturing2/0/tianyudu/all_datasets
+  edge_dim: 0
+  edge_encoder: true
+  edge_encoder_bn: true
+  edge_encoder_name: roland
+  edge_train_mode: all
+  encoder_dim: 80
+  format: infer
+  include_node_features: false
+  is_hetero: false
+  load_cache: false
+  name: bsi_svt_2008.tsv
+  negative_sample_weight: uniform
+  node_encoder: true
+  node_encoder_bn: true
+  node_encoder_name: roland
+  premade_datasets: fresh
+  remove_feature: false
+  shuffle: true
+  split:
+  - 0.8
+  - 0.1
+  - 0.1
+  split_method: default
+  task: link_pred
+  task_type: classification
+  transductive: true
+  transform: none
+  tu_simple: true
+  type_info_loc: append
+device: auto
+example_arg: example
+example_group:
+  example_arg: example
+experimental:
+  rank_eval_multiplier: 1000
+  restrict_training_set: -1
+  visualize_gnn_layer: false
+gnn:
+  act: prelu
+  agg: add
+  att_final_linear: false
+  att_final_linear_bn: false
+  att_heads: 1
+  batchnorm: false
+  dim_inner: 128
+  dropout: 0.0
+  embed_update_method: moving_average
+  gru_kernel: linear
+  keep_edge: 0.5
+  l2norm: true
+  layer_type: residual_edge_conv
+  layers_mp: 2
+  layers_post_mp: 2
+  layers_pre_mp: 1
+  mlp_update_layers: 2
+  msg_direction: single
+  normalize_adj: false
+  skip_connection: affine
+  skip_every: 1
+  stage_type: stack
+link_pred_spec:
+  forecast_frequency: 1
+  forecast_horizon: 7
+mem:
+  inplace: false
+meta:
+  alpha: 0.5
+  is_meta: true
+  method: moving_average
+metric:
+  mrr_method: max
+metric_best: auto
+model:
+  edge_decoding: concat
+  edge_pred_shape: label_index
+  graph_pooling: add
+  loss_fun: cross_entropy
+  match_upper: true
+  size_average: true
+  thresh: 0.5
+  type: gnn_recurrent
+num_threads: 6
+num_workers: 0
+optim:
+  base_lr: 0.03
+  lr_decay: 0.1
+  max_epoch: 100
+  momentum: 0.9
+  optimizer: adam
+  scheduler: cos
+  steps:
+  - 30
+  - 60
+  - 90
+  weight_decay: 0.0005
+out_dir: results
+remark: table4
+seed: 1
+tensorboard_agg: true
+tensorboard_each_run: false
+train:
+  auto_resume: false
+  batch_size: 32
+  ckpt_clean: true
+  ckpt_period: 400
+  epoch_resume: -1
+  eval_period: 20
+  internal_validation_tolerance: 5
+  mode: live_update
+  node_per_graph: 32
+  radius: extend
+  sample_node: false
+  tbptt_freq: 5
+transaction:
+  check_snapshot: false
+  feature_amount_dim: 16
+  feature_edge_int_num: []
+  feature_int_dim: 16
+  feature_node_int_num:
+  - 1018
+  - 33
+  - 13
+  - 23
+  - 5
+  feature_time_dim: 16
+  history: rolling
+  horizon: 1
+  keep_ratio: linear
+  loss: supervised
+  node_feature: raw
+  pred_mode: at
+  snapshot: true
+  snapshot_freq: W
+  snapshot_num: 100
+  time_enc_mode: enc_before_diff
+  time_enc_periods:
+  - 1
+val:
+  node_per_graph: 32
+  radius: extend
+  sample_node: false
+view_emb: false

@@ -1,0 +1,7 @@
+gnn.layers_pre_mp l_pre [2]
+gnn.layers_mp l_mp [2,4,8]
+gnn.layers_post_mp l_post [2,4]
+gnn.agg agg ['add','max','mean']
+gnn.dim_inner dim [32,128,256]
+optim.base_lr lr [0.001,0.01]
+optim.max_epoch epoch [50,200]

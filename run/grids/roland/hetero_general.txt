@@ -1,0 +1,4 @@
+gnn.layers_mp l_mp [2,4]
+gnn.agg agg ['add','mean']
+optim.base_lr lr [0.1,0.03,0.01]
+optim.max_epoch epoch [20]

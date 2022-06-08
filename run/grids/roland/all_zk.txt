@@ -1,0 +1,24 @@
+# Compare performance of our model and models from other paper on zk dataset.
+# HOW TO USE: all you need to change is the dataset.dir field.
+# Add premade_datasets for faster loading, premade_datasets assumes mp_layers=2.
+
+# Models from other papers.
+experimental.rank_eval_multiplier mult [100]
+dataset.format format ['infer']
+dataset.name name ['bsi_zk_2008.tsv']
+dataset.premade_datasets pd ['cached_zk.pt']
+transaction.snapshot_freq freq ['D']
+# gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','gconv_lstm_baseline','tgcn']
+gnn.layer_type model ['evolve_gcn_o','evolve_gcn_h','gconv_gru','gconv_lstm','tgcn']
+gnn.dim_inner dim_inner [64]
+
+# Variations of our models.
+experimental.rank_eval_multiplier mult [100]
+dataset.format format ['infer']
+dataset.name name ['bsi_zk_2008.tsv']
+dataset.premade_datasets pd ['cached_zk.pt']
+transaction.snapshot_freq freq ['D']
+gnn.layer_type model ['residual_edge_conv']
+# gnn.embed_update_method update ['moving_average','masked_gru','moving_average_gru','gru']
+gnn.embed_update_method update ['moving_average','masked_gru','gru']
+gnn.dim_inner dim_inner [64]

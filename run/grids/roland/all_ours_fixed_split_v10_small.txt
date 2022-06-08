@@ -1,0 +1,13 @@
+# Live-update all-in-one script.
+# HOW TO USE: all you need to change is the dataset.dir field in config.yaml.
+# Fixed split.
+
+gnn.layer_type model ['residual_edge_conv']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt']
+gnn.embed_update_method update ['moving_average','mlp']
+gnn.dim_inner dim_inner [128]
+gnn.layers_mp mp [2,3,4]
+gnn.batchnorm bn [True,False]
+gnn.msg_direction msgdir ['single','both']
+optim.base_lr lr [0.1,0.03]
+gnn.layers_post_mp post_mp [1,2]

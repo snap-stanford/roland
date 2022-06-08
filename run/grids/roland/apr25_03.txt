@@ -1,0 +1,15 @@
+# part 2: more detailed analysis for our model. 44 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.layers_mp layers_mp [1,2]
+gnn.dim_inner dim_inner [128,256]
+meta.is_meta is_meta [True]
+meta.method method ['moving_average']
+meta.alpha alpha [0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]
+
+# 4 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.layers_mp layers_mp [1,2]
+gnn.dim_inner dim_inner [128,256]
+meta.is_meta is_meta [True]
+meta.method method ['online_mean']
+meta.alpha alpha [1.0]

@@ -1,0 +1,10 @@
+# 324 configs
+dataset.format format ['infer']
+meta.is_meta is_meta [False]
+dataset.name name ['bsi_svt_2008.tsv']
+gnn.batchnorm bn [True,False]
+gnn.msg_direction msg ['single','both']
+gnn.skip_connection skip ['affine','identity','none']
+gnn.agg agg ['add','mean','max']
+gnn.layers_mp mp [2,3,4]
+optim.base_lr lr [0.003,0.01,0.03]

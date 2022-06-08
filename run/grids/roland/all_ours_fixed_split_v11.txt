@@ -1,0 +1,19 @@
+# 48 configs.
+gnn.layer_type model ['residual_edge_conv']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt']
+gnn.embed_update_method update ['gru']
+gnn.layers_mp mp [2,3,4,5]
+gnn.batchnorm bn [True]
+gnn.msg_direction msgdir ['both']
+optim.base_lr lr [0.1,0.3]
+gnn.layers_post_mp post_mp [2,3]
+
+# 12 configs.
+gnn.layer_type model ['residual_edge_conv']
+dataset.name name ['AS-733']
+gnn.embed_update_method update ['gru']
+gnn.layers_mp mp [2,3,4]
+gnn.batchnorm bn [True]
+gnn.msg_direction msgdir ['both']
+optim.base_lr lr [0.1,0.3]
+gnn.layers_post_mp post_mp [2,3]

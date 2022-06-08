@@ -1,0 +1,6 @@
+# Live-update all-in-one script.
+# HOW TO USE: all you need to change is the dataset.dir field in config.yaml.
+
+gnn.layer_type model ['residual_edge_conv']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','AS-733']
+gnn.embed_update_method update ['mlp','moving_average','gru']

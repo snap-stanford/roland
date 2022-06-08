@@ -1,0 +1,7 @@
+# 6 configs.
+gnn.layer_type model_type ['residual_edge_conv']
+gnn.dim_inner dim [256]
+gnn.batchnorm bn [False]
+gnn.skip_connection skip ['affine','linear']
+transaction.snapshot_freq freq ['W']
+gnn.embed_update_method update ['moving_average','masked_gru','gru']

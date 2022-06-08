@@ -1,0 +1,8 @@
+# 48 configs.
+dataset.AS_node_feature node_feature ['one','one_hot_id','one_hot_degree_global']
+dataset.name name ['AS-733']
+gnn.layers_pre_mp pre_mp [1,2]
+gnn.layers_mp mp [3,4]
+gnn.agg agg ['add','mean']
+optim.base_lr lr [0.03,0.01]
+gnn.layers_post_mp post_mp [2]

@@ -1,0 +1,8 @@
+# Format for each row: name in config.py; alias; range to search
+# No spaces, except between these 3 fields
+# Line breaks are used to union different grid search spaces
+# Feel free to add '#' to add comments
+
+train.mode train_mode ['live_update','new']
+gnn.layer_type model ['residual_edge_conv']
+gnn.layers_mp mp [2,3]

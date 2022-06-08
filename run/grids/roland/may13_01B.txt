@@ -1,0 +1,7 @@
+# 1 config, added to may13-01.
+
+dataset.format format ['infer']
+dataset.name name ['CollegeMsg.txt']
+transaction.snapshot_freq freq ['W']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['moving_average']

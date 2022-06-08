@@ -1,0 +1,15 @@
+# Format for each row: name in config.py; alias; range to search
+# No spaces, except between these 3 fields
+# Line breaks are used to union different grid search spaces
+# Feel free to add '#' to add comments
+
+dataset.shuffle sf [True,False]
+gnn.layer_type l_type ['generaledgeconv','att_over_time_edge_conv']
+gnn.layers_pre_mp l_pre [2,4]
+gnn.layers_mp l_mp [2,4]
+gnn.layers_post_mp l_post [2,4]
+gnn.stage_type stage ['stack']
+gnn.agg agg ['add','mean','max']
+model.edge_decoding decoding ['concat']
+optim.base_lr lr [0.01,0.03]
+optim.max_epoch epoch [200]

@@ -1,0 +1,14 @@
+# Live-update all-in-one script.
+# HOW TO USE: all you need to change is the dataset.dir field in config.yaml.
+
+# Set dataset.format to 'infer', main.py will fill 
+# format, edge_dim, edge_encoder_name, node_encoder automatically based on name.
+# for as-733 dataset, put name = 'AS-733'.
+# Baseline EvolveGCN paper used 100 negative edges.
+
+# All datasets (excluding bsi-zk) + our model.
+experimental.rank_eval_multiplier mul [100]
+dataset.format format ['infer']
+dataset.name name ['bitcoinotc.csv','bitcoinalpha.csv','CollegeMsg.txt','AS-733']
+gnn.layer_type model ['residual_edge_conv']
+gnn.embed_update_method update ['mlp','moving_average','gru']
