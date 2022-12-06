@@ -37,7 +37,9 @@ June 2021, Camera Ready Version: Ubuntu 20.04 + RTX3090 (CUDA 11.4)
 }
 ```
 
-# Backend: the `GraphGym` Platform
+# Backend: the [`GraphGym`](https://github.com/snap-stanford/GraphGym) Platform
+<details>
+  <summary>Details on Deploying GraphGym</summary>
 GraphGym is a platform for designing and evaluating Graph Neural Networks (GNN).
 ### Highlights
 **1. Highly modularized pipeline for GNN**
@@ -336,3 +338,4 @@ If you find GraphGym or our paper useful, please cite our paper:
   year = {2020}
 }
 ```
+</details>
