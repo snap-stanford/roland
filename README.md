@@ -131,6 +131,11 @@ pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/t
 pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-${TORCH}.html
 pip install torch-geometric
 ```
+Alternatively, you can install dependencies of `torch-geometric` in one line:
+```bash
+pip install torch-scatter torch-sparse torch-cluster torch-spline-conv -f https://data.pyg.org/whl/torch-${TORCH}+${CUDA}.html
+```
+**Note**: the installation of `torch-scatter` can take up to 10 minutes. Please make sure the CUDA version and PyTorch version match your system driver exactly.
 
 **4. Clone GraphGym and install other dependencies:**
 
