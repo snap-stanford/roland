@@ -27,7 +27,15 @@ Please see `./roland_raw_records` for tensorbaord records for generating Table 2
 June 2021, Camera Ready Version: Ubuntu 20.04 + RTX3090 (CUDA 11.4)
 
 ## Citing the ROLAND Paper
-TODO:
+```
+@inproceedings{you2022roland,
+  title={ROLAND: graph learning framework for dynamic graphs},
+  author={You, Jiaxuan and Du, Tianyu and Leskovec, Jure},
+  booktitle={Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  pages={2358--2366},
+  year={2022}
+}
+```
 
 # Backend: the `GraphGym` Platform
 GraphGym is a platform for designing and evaluating Graph Neural Networks (GNN).
