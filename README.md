@@ -1,5 +1,5 @@
 # ROLAND: Graph Learning Framework for Dynamic Graphs
-This repository contains implementations for the ROLAND paper.
+This repository contains implementations for the ROLAND paper. This repository is a version of [GraphGym](https://github.com/snap-stanford/GraphGym) modified for the ROLAND paper to include our new model implementation.
 
 ## Replication Materials
 ### Accessing Datasets
@@ -8,7 +8,7 @@ Please see the `get_roland_public_data.sh` script for accessing publicly availab
 We have provided MD5 values of datasets at `public_dataset_MD5.txt` for you to verify the correctness of downloaded datasets.
 
 ### Run Experiments in the Paper
-`./run/roland_publication`
+The script `./run/replicate_roland_tables.sh` runs experiments of all tables in the paper.
 
 ## Getting Table Representation of Experiment Results
 We first upload logs to the TensorBoard Dev following tutorial [here](https://www.tensorflow.org/tensorboard/dataframe_api). This would allow you to obtain a `experiment_id`.
