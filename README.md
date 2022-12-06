@@ -7,29 +7,32 @@ Please see the `get_roland_public_data.sh` script for accessing publicly availab
 
 We have provided MD5 values of datasets at `public_dataset_MD5.txt` for you to verify the correctness of downloaded datasets.
 
+### Dependencies
+We recorded our *complete* conda environment configuration: `roland_environment.yml`.
+
+You can check out requirements in `requirements.txt` for *essential* packages.
+
 ### Run Experiments in the Paper
 The script `./run/replicate_roland_tables.sh` runs experiments of all tables in the paper.
 
 ## Getting Table Representation of Experiment Results
-We first upload logs to the TensorBoard Dev following tutorial [here](https://www.tensorflow.org/tensorboard/dataframe_api). This would allow you to obtain a `experiment_id`.
+We uploaded our raw tensorboard logs this repository as well. This section allows you to replicate our tables directly based on our tensorboard logs without re-running experiments.
 
-Dependencies file: `roland_environment.yml`.
+1. We first upload logs to the TensorBoard Dev following tutorial [here](https://www.tensorflow.org/tensorboard/dataframe_api). This would allow you to obtain a `experiment_id`.
 
-To generate table in pandas format, you need to run the following command:
+2. To generate table in pandas format, you need to run the following command:
 
 ```bash
 cd ./run
 python3 make_table_tensorboard_dev.py <The Experiment ID You Obtained>
 ```
+This script *prints* the latex-formatted tables to your terminal.
 
 ### Configuration Fils for the Best Model
-The configuration for the model corresponding to each entry in Table 2-4 are located at `./run/replication_configs/`
-
-### Experiment Records (Tensorboard Logs) For Tables in the Paper.
-Please see `./roland_raw_records` for tensorbaord records for generating Table 2-4.
+The configuration for the model corresponding to each entry in Table 2-4 are located at `./run/replication_configs/`. Each file name describes the dataset, dataset configuration and model specification. You can also look into these `yaml` files for more details.
 
 ### Testing environment:
-June 2021, Camera Ready Version: Ubuntu 20.04 + RTX3090 (CUDA 11.4)
+We tested our replication materials in June 2021 (the Camera Ready Version) on Ubuntu 20.04 + RTX3090 (CUDA 11.4).
 
 ## Citing the ROLAND Paper
 ```
