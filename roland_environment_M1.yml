@@ -1,0 +1,75 @@
+# yml file to install ROLAND Conda environment on Apple Silicon macbooks. 
+# also works to install stable version of Graphgym, for a quick and easy Conda Setup.
+name: roland
+channels:
+  - pyg
+  - pytorch
+  - conda-forge
+  - nvidia
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - absl-py=1.0.0=pyhd8ed1ab_0
+  - aiosignal=1.2.0=pyhd8ed1ab_0
+  - async-timeout=4.0.2=pyhd8ed1ab_0
+  - attrs=21.4.0=pyhd8ed1ab_0
+  - blas=1.0=mkl
+  - blinker=1.4=py_1
+  - cachetools=5.0.0=pyhd8ed1ab_0
+  - charset-normalizer=2.0.4=pyhd3eb1b0_0
+  - cloudpickle=2.0.0=pyhd3eb1b0_0
+  - cycler=0.11.0=pyhd3eb1b0_0
+  - dask-glm=0.2.0=py_1
+  - dask-ml=2022.5.27=pyhd8ed1ab_0
+  - fonttools=4.25.0=pyhd3eb1b0_0
+  - google-auth=2.6.6=pyh6c4a22f_0
+  - google-auth-oauthlib=0.4.6=pyhd8ed1ab_0
+  - heapdict=1.0.1=pyhd3eb1b0_0
+  - idna=3.3=pyhd3eb1b0_0
+  - jinja2=3.0.3=pyhd3eb1b0_0
+  - joblib=1.1.0=pyhd3eb1b0_0
+  - markdown=3.3.7=pyhd8ed1ab_0
+  - multipledispatch=0.6.0=py_0
+  - munkres=1.1.4=py_0
+  - networkx=2.7.1=pyhd3eb1b0_0
+  - oauthlib=3.2.0=pyhd8ed1ab_0
+  - packaging=21.3=pyhd3eb1b0_0
+  - partd=1.2.0=pyhd3eb1b0_1
+  - pyasn1=0.4.8=py_0
+  - pyasn1-modules=0.2.7=py_0
+  - pycparser=2.21=pyhd3eb1b0_0
+  - pyjwt=2.4.0=pyhd8ed1ab_0
+  - pyopenssl=22.0.0=pyhd3eb1b0_0
+  - pyparsing=3.0.4=pyhd3eb1b0_0
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - python-louvain=0.15=pyhd3eb1b0_0
+  - python_abi=3.9=2_cp39
+  - pytorch-mutex=1.0=cuda
+  - pytz=2021.3=pyhd3eb1b0_0
+  - pyu2f=0.1.5=pyhd8ed1ab_0
+  - requests=2.27.1=pyhd3eb1b0_0
+  - requests-oauthlib=1.3.1=pyhd8ed1ab_0
+  - rsa=4.8=pyhd8ed1ab_0
+  - seaborn=0.11.2=pyhd3eb1b0_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sortedcontainers=2.4.0=pyhd3eb1b0_0
+  - tblib=1.7.0=pyhd3eb1b0_0
+  - tensorboard=2.9.0=pyhd8ed1ab_0
+  - tensorboard-plugin-wit=1.8.1=pyhd8ed1ab_0
+  - threadpoolctl=2.2.0=pyh0d69192_0
+  - toolz=0.11.2=pyhd3eb1b0_0
+  - typing-extensions=4.1.1=hd3eb1b0_0
+  - typing_extensions=4.1.1=pyh06a4308_0
+  - tzdata=2022a=hda174b7_0
+  - werkzeug=2.1.2=pyhd8ed1ab_1
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - yacs=0.1.6=pyhd3eb1b0_1
+  - zict=2.0.0=pyhd3eb1b0_0
+  - zipp=3.8.0=pyhd8ed1ab_0
+  - pip:
+    - littleutils==0.2.2
+    - ogb==1.3.3
+    - outdated==0.2.1
+    - protobuf==4.21.1
+    - tensorboardx==2.5
+prefix: /home/tianyudu/anaconda3/envs/rolanden
