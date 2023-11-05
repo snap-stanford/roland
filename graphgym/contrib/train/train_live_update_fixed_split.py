@@ -195,10 +195,10 @@ def evaluate_step(model, dataset, task: Tuple[int, int],
     mrr_batch = get_task_batch(dataset, today, tomorrow,
                                prev_node_states).clone()
 
-    # mrr = train_utils.report_baseline_MRR(mrr_batch, model)
-    mrr, rck1, rck3, rck10 = train_utils.report_rank_based_eval(
-        mrr_batch, model,
-        num_neg_per_node=cfg.experimental.rank_eval_multiplier)
+    mrr = train_utils.report_baseline_MRR(mrr_batch, model)
+    # mrr, rck1, rck3, rck10 = train_utils.report_rank_based_eval(
+    #     mrr_batch, model,
+    #     num_neg_per_node=cfg.experimental.rank_eval_multiplier)
 
     return {'loss': loss.item(), 'mrr': mrr, 'micro_auc': micro_auc, 'macro_auc': macro_auc, 'accuracy': accuracy}
 
